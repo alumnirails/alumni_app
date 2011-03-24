@@ -1,4 +1,18 @@
 AlumniApp::Application.routes.draw do
+  get "pages/Home"
+
+  get "pages/Career_Dev"
+
+  get "pages/Student_Dev"
+
+  get "pages/Reunions"
+
+  get "pages/Events"
+
+  get "pages/GivingToDJS"
+
+  get "pages/ContactUs"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
