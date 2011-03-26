@@ -12,7 +12,17 @@ AlumniApp::Application.routes.draw do
   get "pages/GivingToDJS"
 
   get "pages/ContactUs"
+  
+  match '/ContactUs', :to => 'pages#ContactUs'
+  match '/Career_Dev',   :to => 'pages#Career_Dev'
+  match '/Student_Dev',    :to => 'pages#Student_Dev'
+  match '/Reunions', :to => 'pages#Reunions'
+  match '/Events',   :to => 'pages#Events'
+  match '/GivingToDJS',    :to => 'pages#GivingToDJS'
 
+  root :to => 'pages#Home'
+
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
