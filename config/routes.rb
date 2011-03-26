@@ -1,5 +1,5 @@
 AlumniApp::Application.routes.draw do
-  get "users/new"
+  #get "users/new"
 
  # get "pages/home"
 
@@ -14,8 +14,9 @@ AlumniApp::Application.routes.draw do
   #get "pages/givingToDJS"
 
   #get "pages/contactUs"
-  
-  
+  resources :users
+
+   
   match '/signup',  :to => 'users#new'
   match '/contactUs', :to => 'pages#contactUs'
   match '/careerDev',   :to => 'pages#careerDev'
