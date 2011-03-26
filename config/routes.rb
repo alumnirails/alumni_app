@@ -1,26 +1,30 @@
 AlumniApp::Application.routes.draw do
-  get "pages/Home"
+  get "users/new"
 
-  get "pages/Career_Dev"
+ # get "pages/home"
 
-  get "pages/Student_Dev"
+  #get "pages/careerDev"
 
-  get "pages/Reunions"
+  #get "pages/studentDev"
 
-  get "pages/Events"
+  #get "pages/reunions"
 
-  get "pages/GivingToDJS"
+  #get "pages/events"
 
-  get "pages/ContactUs"
+  #get "pages/givingToDJS"
+
+  #get "pages/contactUs"
   
-  match '/ContactUs', :to => 'pages#ContactUs'
-  match '/Career_Dev',   :to => 'pages#Career_Dev'
-  match '/Student_Dev',    :to => 'pages#Student_Dev'
-  match '/Reunions', :to => 'pages#Reunions'
-  match '/Events',   :to => 'pages#Events'
-  match '/GivingToDJS',    :to => 'pages#GivingToDJS'
+  
+  match '/signup',  :to => 'users#new'
+  match '/contactUs', :to => 'pages#contactUs'
+  match '/careerDev',   :to => 'pages#careerDev'
+  match '/studentDev',    :to => 'pages#studentDev'
+  match '/reunions', :to => 'pages#reunions'
+  match '/events',   :to => 'pages#events'
+  match '/givingToDJS',    :to => 'pages#givingToDJS'
 
-  root :to => 'pages#Home'
+  root :to => 'pages#home'
 
  
   # The priority is based upon order of creation:

@@ -1,29 +1,29 @@
 class PagesController < ApplicationController
-  def Home
+  def home
   @title = 'Home' 
   end
 
-  def Career_Dev
+  def careerDev
 @title = 'Career Development' 
   end
 
-  def Student_Dev
+  def studentDev
   @title = 'Student Development' 
   end
 
-  def Reunions
+  def reunions
   @title = 'Reunions' 
   end
 
-  def Events
+  def events
   @title = 'Events' 	
   end
 
-  def GivingToDJS
+  def givingToDJS
   @title = 'Giving to DJS' 
   end
 
-  def ContactUs
+  def contactUs
   @title = 'Contact Us' 
   end
 

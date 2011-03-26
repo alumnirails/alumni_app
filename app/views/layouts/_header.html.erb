@@ -1,0 +1,18 @@
+<header>
+<center>
+<%= image_tag("th_djscoe.jpg", :alt => "Sample App", :class => "round") %>
+        <% topimage = image_tag("topimage1.gif", :alt => "Sample App", :class => "round") %>
+<%= link_to topimage, root_path %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Career Development", careerDev_path %></li>
+            <li><%= link_to "Student Development", studentDev_path %></li>
+	    <li><%= link_to "Reunions", reunions_path %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Giving to DJSCOE", givingToDJS_path %></li>
+	    <li><%= link_to "Sign in", '#' %></li>
+          </ul>
+        </nav>
+</center>
+      </header>
