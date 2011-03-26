@@ -1,4 +1,6 @@
 AlumniApp::Application.routes.draw do
+  get "sessions/new"
+
   #get "users/new"
 
  # get "pages/home"
@@ -15,7 +17,10 @@ AlumniApp::Application.routes.draw do
 
   #get "pages/contactUs"
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
    
   match '/signup',  :to => 'users#new'
   match '/contactUs', :to => 'pages#contactUs'
