@@ -157,7 +157,8 @@ div.field, div.actions {
   color: #fff;
 }
 
-#error_explanation {
+#error_explanation 
+{
   width: 400px;
   border: 2px solid red;
   padding: 7px;
@@ -166,7 +167,8 @@ div.field, div.actions {
   background-color: #f0f0f0;
 }
 
-#error_explanation h2 {
+#error_explanation 
+h2 {
   text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
@@ -176,13 +178,23 @@ div.field, div.actions {
   color: #fff;
 }
 
-#error_explanation p {
+#error_explanation 
+p {
   color: #333;
   margin-bottom: 0;
   padding: 5px;
 }
 
-#error_explanation ul li {
+#error_explanation 
+ul li {
   font-size: 12px;
   list-style: square;
+}
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
 }

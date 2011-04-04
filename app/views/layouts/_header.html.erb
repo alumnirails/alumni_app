@@ -11,8 +11,17 @@
 	    <li><%= link_to "Reunions", reunions_path %></li>
             <li><%= link_to "Events", events_path %></li>
             <li><%= link_to "Giving to DJSCOE", givingToDJS_path %></li>
-	    <li><%= link_to "Sign in", '#' %></li>
-          </ul>
+<% if signed_in? %>
+      <li><%= link_to "Users", users_path %></li>
+      <li><%= link_to "Profile", current_user %></li>
+      <% end %>
+<% if signed_in? %>
+<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <% else %>
+      <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+       </ul>
         </nav>
 </center>
       </header>
