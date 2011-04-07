@@ -1,7 +1,23 @@
-<h1></h1>
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">What's up?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+  <%= render 'shared/stats' %>
+      </td>
+    </tr>
+  </table>
+<% else %>
 <p>
-  This is the home page for the
-  <a href="http://djscoe.org/">D.J Sanghvi College OF Engineering</a>
-  alumni application.
+ Welcome to the <a href="http://djscoe.org/">D.J Sanghvi College OF Engineering</a>
+  alumni website.
+This alumni website has been specially developed for the alumni,the current students and the faculty for our college.Anyone who has ever been a part of DJSCOE is welcome to join.
+Join today by clicking on the Sign Up button.Click on the Sign In link if you have already registered. 
 </p>
 <%= link_to "Sign up now!",signup_path, :class => "signup_button round" %>
+<% end %>

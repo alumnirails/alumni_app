@@ -16,9 +16,15 @@ AlumniApp::Application.routes.draw do
   #get "pages/givingToDJS"
 
   #get "pages/contactUs"
-  resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
-
+  #resources :users
+   resources :sessions, :only => [:new, :create, :destroy]
+   resources :microposts, :only => [:create, :destroy]
+   resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :relationships, :only => [:create, :destroy]
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
    
@@ -29,6 +35,7 @@ AlumniApp::Application.routes.draw do
   match '/reunions', :to => 'pages#reunions'
   match '/events',   :to => 'pages#events'
   match '/givingToDJS',    :to => 'pages#givingToDJS'
+  match '/about', :to => 'pages#about'
 
   root :to => 'pages#home'
 
